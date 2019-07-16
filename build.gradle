@@ -1,6 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '2.1.2.RELEASE'
+        hibernateVersion = '5.4.3.Final'
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -25,6 +26,7 @@ repositories {
 
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${springBootVersion}"
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: "${hibernateVersion}"
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
