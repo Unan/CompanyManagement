@@ -2,6 +2,8 @@ buildscript {
     ext {
         springBootVersion = '2.1.2.RELEASE'
         hibernateVersion = '5.4.3.Final'
+        postgreSQLVersion = '42.2.6'
+        springJDBCVersion = '5.1.8.RELEASE'
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -26,7 +28,11 @@ repositories {
 
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${springBootVersion}"
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: "${springBootVersion}"
+
     implementation group: 'org.hibernate', name: 'hibernate-core', version: "${hibernateVersion}"
+    implementation group: 'org.postgresql', name: 'postgresql', version: "${postgreSQLVersion}"
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: "${springJDBCVersion}"
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
