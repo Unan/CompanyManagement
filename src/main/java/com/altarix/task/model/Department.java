@@ -1,5 +1,8 @@
 package com.altarix.task.model;
 
+import com.altarix.task.serdes.DepartmentToStringSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -9,17 +12,22 @@ import java.util.List;
 public class Department {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @NotNull
+    @Column(unique = true)
     private String name;
+
     @NotNull
     private Date foundation;
-    @ManyToOne
+
+    @JsonSerialize(using = DepartmentToStringSerializer.class)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Department parentDepartment;
-    @OneToMany
-    private List<Department> subDepartments;
-    @OneToMany
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     private List<Employee> employees;
-    @OneToOne
-    private Employee head;
 
     public Department() {
     }
@@ -27,16 +35,20 @@ public class Department {
     public Department(String name,
                       Date foundation,
                       Department parentDepartment,
-                      List<Department> subDepartments,
-                      List<Employee> employees,
-                      Employee head
+                      List<Employee> employees
     ) {
         this.name = name;
         this.foundation = foundation;
         this.parentDepartment = parentDepartment;
-        this.subDepartments = subDepartments;
         this.employees = employees;
-        this.head = head;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -63,27 +75,11 @@ public class Department {
         this.parentDepartment = parentDepartment;
     }
 
-    public List<Department> getSubDepartments() {
-        return subDepartments;
-    }
-
-    public void setSubDepartments(List<Department> subDepartments) {
-        this.subDepartments = subDepartments;
-    }
-
     public List<Employee> getEmployees() {
         return employees;
     }
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
-    }
-
-    public Employee getHead() {
-        return head;
-    }
-
-    public void setHead(Employee head) {
-        this.head = head;
     }
 }

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52b4f61d-f83f-42ce-83c2-876f27179967" name="Default Changelist" comment="" />
+    <list default="true" id="52b4f61d-f83f-42ce-83c2-876f27179967" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66d220ad-064a-42d5-a882-8a1ac84b6818.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/66d220ad-064a-42d5-a882-8a1ac84b6818.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66d220ad-064a-42d5-a882-8a1ac84b6818/storage_v2/_src_/database/company_management.RdEN4w/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/66d220ad-064a-42d5-a882-8a1ac84b6818/storage_v2/_src_/database/company_management.RdEN4w/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DepartmentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DepartmentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/altarix/task/dao/EmployeeDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/createScript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/createScript.sql" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -53,6 +63,15 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="company_management@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="company_management: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -69,6 +88,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -86,10 +108,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/sql/dataInitScript.sql">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/model/Department.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="300">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/model/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -106,33 +140,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/model/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="150">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DepartmentDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            <state relative-caret-position="154">
+              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#241#242#0" expanded="true" />
-                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#945#946#0" expanded="true" />
+                <element signature="e#1004#1005#0" expanded="true" />
+                <element signature="e#1051#1052#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
+                <element signature="e#1060#1061#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,43 +169,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/sql/createScript.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-985">
-              <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+            <state relative-caret-position="1025">
+              <caret line="41" column="78" lean-forward="true" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/employeeService/EmployeeService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="150">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#396#397#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/controller/MyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1491#1492#0" expanded="true" />
+                <element signature="e#1533#1534#0" expanded="true" />
+                <element signature="e#4182#4183#0" expanded="true" />
+                <element signature="e#4236#4237#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DepartmentDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/dao/EmployeeDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="554">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,6 +250,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>timestamp</find>
+      <find>255</find>
+      <find>add</find>
+      <find>fkbejtwvg9bxus2mffsm3swj3u9</find>
+      <find>fk82yv989iaqac1k17yrso0j659</find>
+      <find>sess</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,35 +263,41 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/Application.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/init.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DAO.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d768d0f9-6571-4adb-93eb-4f84a6674989/console_3.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d768d0f9-6571-4adb-93eb-4f84a6674989/console_4.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d768d0f9-6571-4adb-93eb-4f84a6674989/console_5.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/66d220ad-064a-42d5-a882-8a1ac84b6818/console_1.sql" />
-        <option value="$PROJECT_DIR$/create.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Department.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Gender.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Position.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Employee.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/controller/MyController.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/66d220ad-064a-42d5-a882-8a1ac84b6818/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/dao/MyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/controller/DepartmentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/service/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/sql/createScript.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/sql/dataInitScript.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/service/employeeService/EmployeeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/service/employeeService/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DepartmentDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/contr/qwe.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/sql/dataInitScript.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/66d220ad-064a-42d5-a882-8a1ac84b6818/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/config/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/metamodel/Department_.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/dao/EmployeeDAO.java" />
+        <option value="$PROJECT_DIR$/create.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/serdes/DepartmentToStringSerilizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/serdes/DepartmentToStringSerializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/sql/createScript.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Department.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DepartmentDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altarix/task/controller/MyController.java" />
       </list>
     </option>
   </component>
@@ -244,8 +308,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="438" />
-    <option name="y" value="34" />
+    <option name="x" value="260" />
+    <option name="y" value="20" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -257,6 +321,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="CatdeaLogs" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -298,7 +364,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="task" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompanyManagement" type="b2602c69:ProjectViewProjectNode" />
@@ -307,7 +373,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="task" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompanyManagement" type="b2602c69:ProjectViewProjectNode" />
@@ -353,11 +419,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CompanyManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,7 +439,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/altarix/task/model/Department.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -380,6 +449,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\stepa\Desktop\Git\CompanyManagement\src\main\resources\sql" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\stepa\Desktop\Git\CompanyManagement\src\main\java\com\altarix\task\service\departmentService" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -394,7 +466,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="DepartmentDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.altarix.task.dao.DepartmentDAO" />
+      <module name="CompanyManagement.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.altarix.task.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompanyManagement [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="CompanyManagement.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.altarix.task.Application" />
@@ -402,6 +506,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CompanyManagement [dependencies]" />
+        <item itemvalue="Application.DepartmentDAO" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -417,18 +527,24 @@
       <workItem from="1563283888538" duration="38113000" />
       <workItem from="1563332346808" duration="42000" />
       <workItem from="1563365112757" duration="4275000" />
-      <workItem from="1563372071901" duration="13617000" />
+      <workItem from="1563372071901" duration="25513000" />
+      <workItem from="1563440882469" duration="34310000" />
+      <workItem from="1563553836675" duration="17507000" />
+      <workItem from="1563611529907" duration="3266000" />
+      <workItem from="1563614968382" duration="32930000" />
+      <workItem from="1563709447231" duration="5585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59805000" />
+    <option name="totallyTimeSpent" value="165299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2019334" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82758623" visible="true" weight="0.21750806" />
+      <window_info id="Structure" order="1" sideWeight="0.1724138" side_tool="true" visible="true" weight="0.21750806" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -437,129 +553,106 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32998884" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6477146" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989259" weight="0.6031215" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.87513936" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.30880713" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4180602" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4180602" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50107414" side_tool="true" weight="0.6031215" />
+      <window_info anchor="bottom" id="Spring" order="11" weight="0.32998884" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32998884" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32998884" />
-      <window_info anchor="bottom" id="SQL Generator" order="16" weight="0.32998884" />
+      <window_info anchor="bottom" id="SQL Generator" order="15" weight="0.32998884" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32441473" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32975295" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20891514" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.32975295" />
-      <window_info anchor="right" id="Database" order="7" weight="0.1933405" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.32975295" />
+      <window_info anchor="right" id="Gradle" order="7" weight="0.32975295" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.32975295" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.1.2.RELEASE/9f311b1b0f10b22c1699933f48ecc2e6cce18800/spring-boot-autoconfigure-2.1.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.java</url>
+          <line>134</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d768d0f9-6571-4adb-93eb-4f84a6674989/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d768d0f9-6571-4adb-93eb-4f84a6674989/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d768d0f9-6571-4adb-93eb-4f84a6674989/console_3.sql">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/5.1.4.RELEASE/ef4929f436359ebe9be5003ed32e0c33d8335182/spring-orm-5.1.4.RELEASE-sources.jar!/org/springframework/orm/jpa/LocalContainerEntityManagerFactoryBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="288">
+          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d768d0f9-6571-4adb-93eb-4f84a6674989/console_4.sql">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.1.2.RELEASE/9f311b1b0f10b22c1699933f48ecc2e6cce18800/spring-boot-autoconfigure-2.1.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="152">
+          <caret line="496" column="44" selection-start-line="496" selection-start-column="44" selection-end-line="496" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d768d0f9-6571-4adb-93eb-4f84a6674989/console_5.sql">
+    <entry file="das://66d220ad-064a-42d5-a882-8a1ac84b6818/database/company_management/schema/public/sequence/hibernate_sequence" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/Query.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        <state relative-caret-position="372">
+          <caret line="404" column="34" lean-forward="true" selection-start-line="404" selection-start-column="34" selection-end-line="404" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="das://d768d0f9-6571-4adb-93eb-4f84a6674989/database/new_database123/access-method/btree" />
-    <entry file="das://d768d0f9-6571-4adb-93eb-4f84a6674989/database/new_database123/access-method/gin" />
-    <entry file="das://d768d0f9-6571-4adb-93eb-4f84a6674989/database/new_database123/access-method/gist" />
-    <entry file="das://d768d0f9-6571-4adb-93eb-4f84a6674989/database/new_database123/access-method/hash" />
-    <entry file="das://d768d0f9-6571-4adb-93eb-4f84a6674989/database/new_database123/access-method/spgist" />
-    <entry file="das://d768d0f9-6571-4adb-93eb-4f84a6674989/role/postgres" />
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/CascadeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/393afefd-1e2e-4ef3-bc5c-d2c5a0dac3ea/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.1.2.RELEASE/9f311b1b0f10b22c1699933f48ecc2e6cce18800/spring-boot-autoconfigure-2.1.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="135" column="27" selection-start-line="135" selection-start-column="27" selection-end-line="135" selection-end-column="27" />
+        </state>
+      </provider>
     </entry>
-    <entry file="uml://DATABASE/66d220ad-064a-42d5-a882-8a1ac84b6818">
+    <entry file="jar://E:/IT/jdk/src.zip!/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/66d220ad-064a-42d5-a882-8a1ac84b6818.SCHEMA:company_management.public">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>DATABASE</ID>
-          <OriginalElement>66d220ad-064a-42d5-a882-8a1ac84b6818</OriginalElement>
+          <OriginalElement>66d220ad-064a-42d5-a882-8a1ac84b6818.SCHEMA:company_management.public</OriginalElement>
           <nodes>
-            <node x="111.5" y="426.0">66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department</node>
-            <node x="69.24166666666667" y="628.0">66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department_sub_departments</node>
-            <node x="227.7416666666667" y="0.0">66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.employee</node>
-            <node x="414.2416666666667" y="628.0">66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department_employees</node>
+            <node x="" y="">66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department</node>
+            <node x="" y="">66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.employee</node>
+            <node x="" y="">66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department_employees</node>
           </nodes>
           <notes />
-          <edges>
-            <edge source="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department" target="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department">
-              <point x="-110.25" y="71.0" />
-              <point x="148.25" y="588.0" />
-              <point x="91.5" y="588.0" />
-              <point x="91.5" y="497.0" />
-              <point x="-147.0" y="-0.0" />
-            </edge>
-            <edge source="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department_employees" target="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department">
-              <point x="-64.75000000000003" y="-44.5" />
-              <point x="478.9916666666667" y="608.0" />
-              <point x="368.75" y="608.0" />
-              <point x="110.25" y="71.0" />
-            </edge>
-            <edge source="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department" target="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.employee">
-              <point x="-73.5" y="-71.0" />
-              <point x="185.0" y="401.0" />
-              <point x="268.40833333333336" y="401.0" />
-              <point x="-81.33333333333334" y="188.0" />
-            </edge>
-            <edge source="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department_employees" target="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.employee">
-              <point x="64.74999999999997" y="-44.5" />
-              <point x="608.4916666666667" y="401.0" />
-              <point x="431.07500000000005" y="401.0" />
-              <point x="81.33333333333334" y="188.0" />
-            </edge>
-            <edge source="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.employee" target="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department">
-              <point x="-2.8421709430404007E-14" y="188.0" />
-              <point x="349.7416666666667" y="401.0" />
-              <point x="332.0" y="401.0" />
-              <point x="73.5" y="-71.0" />
-            </edge>
-            <edge source="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department_sub_departments" target="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department">
-              <point x="81.25" y="-44.5" />
-              <point x="312.9916666666667" y="608.0" />
-              <point x="295.25" y="608.0" />
-              <point x="36.75" y="71.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.928629579375848" x="-66.0" y="238.0" />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="189.0" y="372.0" />
           <SelectedNodes />
           <Categories>
             <Category>Key columns</Category>
@@ -569,74 +662,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/66d220ad-064a-42d5-a882-8a1ac84b6818/console_1.sql">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/UniqueConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        <state relative-caret-position="415">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/DiscriminatorColumn.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/OneToMany.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        <state relative-caret-position="638">
+          <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/InheritanceType.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/JoinColumn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        <state relative-caret-position="141">
+          <caret line="96" column="17" selection-start-line="95" selection-start-column="18" selection-end-line="96" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/Inheritance.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/JoinTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state relative-caret-position="1400">
+          <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.1.2.RELEASE/9f311b1b0f10b22c1699933f48ecc2e6cce18800/spring-boot-autoconfigure-2.1.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaProperties.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/my.log" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/ManyToOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department</OriginalElement>
+          <nodes>
+            <node x="135.5" y="-148.0">66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department" target="66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department">
+              <point x="0.0" y="71.0" />
+              <point x="138.5" y="162.0" />
+              <point x="0.5" y="162.0" />
+              <point x="0.5" y="71.0" />
+              <point x="-118.0" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-172.0" y="-90.0" />
+          <SelectedNodes>
+            <node>66d220ad-064a-42d5-a882-8a1ac84b6818.TABLE:company_management.public.department</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.0/a0ad4e203304ccab7e01266fa814115850edb8a9/jackson-annotations-2.9.0-sources.jar!/com/fasterxml/jackson/annotation/JsonIgnore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/GenerationType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/EntityManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
-          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-          <folding>
-            <element signature="e#3080#3081#0" expanded="true" />
-            <element signature="e#3109#3110#0" expanded="true" />
-          </folding>
+          <caret line="853" column="21" selection-start-line="853" selection-start-column="21" selection-end-line="853" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.1.2.RELEASE/9f311b1b0f10b22c1699933f48ecc2e6cce18800/spring-boot-autoconfigure-2.1.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/orm/jpa/HibernateProperties.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/dataInitScript.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-          <folding>
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2112#2113#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="140">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/config/Config.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/criteria/CriteriaQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6537">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.3.Final/b79a6517b561b8ff6feeb28389ee43f9d2fc2d1/hibernate-core-5.4.3.Final-sources.jar!/org/hibernate/SharedSessionContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.1.0.Final/88a4d5e57ab2cb0fef12866c008c90fbb2ecde37/hibernate-core-5.1.0.Final-sources.jar!/org/hibernate/SharedSessionContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="119" column="20" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/model/metamodel/Department_.java" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="875">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.3.Final/b79a6517b561b8ff6feeb28389ee43f9d2fc2d1/hibernate-core-5.4.3.Final-sources.jar!/org/hibernate/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="461" column="9" selection-start-line="461" selection-start-column="9" selection-end-line="461" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.3.Final/b79a6517b561b8ff6feeb28389ee43f9d2fc2d1/hibernate-core-5.4.3.Final-sources.jar!/org/hibernate/internal/SessionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="735" column="31" lean-forward="true" selection-start-line="735" selection-start-column="31" selection-end-line="735" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.3.Final/b79a6517b561b8ff6feeb28389ee43f9d2fc2d1/hibernate-core-5.4.3.Final-sources.jar!/org/hibernate/event/spi/SaveOrUpdateEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.3.Final/b79a6517b561b8ff6feeb28389ee43f9d2fc2d1/hibernate-core-5.4.3.Final-sources.jar!/org/hibernate/event/internal/DefaultSaveOrUpdateEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/criteria/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="928">
+          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/criteria/CriteriaBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8325">
+          <caret line="352" column="42" selection-start-line="352" selection-start-column="42" selection-end-line="352" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/66d220ad-064a-42d5-a882-8a1ac84b6818/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="72" selection-start-line="72" selection-end-line="143" selection-end-column="41" />
+        <state relative-caret-position="150">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="das://66d220ad-064a-42d5-a882-8a1ac84b6818/database/company_management/schema/public/table/department_sub_departments">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/employeeService/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/serdes/DepartmentToStringSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://66d220ad-064a-42d5-a882-8a1ac84b6818/database/company_management/schema/public/table/department_employees">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
         </state>
       </provider>
     </entry>
@@ -647,50 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/controller/MyController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DAO.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.3.Final/b79a6517b561b8ff6feeb28389ee43f9d2fc2d1/hibernate-core-5.4.3.Final-sources.jar!/org/hibernate/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9975">
-          <caret line="420" column="39" selection-start-line="420" selection-start-column="39" selection-end-line="420" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://66d220ad-064a-42d5-a882-8a1ac84b6818/database/company_management/schema/public/table/department_employees">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/IT/jdk/src.zip!/java/util/Properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.3.Final/b79a6517b561b8ff6feeb28389ee43f9d2fc2d1/hibernate-core-5.4.3.Final-sources.jar!/org/hibernate/cfg/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="220" column="44" selection-start-line="220" selection-start-column="44" selection-end-line="220" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.3.Final/b79a6517b561b8ff6feeb28389ee43f9d2fc2d1/hibernate-core-5.4.3.Final-sources.jar!/org/hibernate/SessionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://66d220ad-064a-42d5-a882-8a1ac84b6818/database/company_management/schema/public/table/department">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -698,31 +880,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/controller/DepartmentController.java">
+    <entry file="file://$PROJECT_DIR$/create.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="200">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="175">
+          <caret line="7" column="117" selection-start-line="7" selection-start-column="117" selection-end-line="7" selection-end-column="117" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/createScript.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="1025">
+          <caret line="41" column="78" lean-forward="true" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/model/Department.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="300">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -731,11 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="125">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -748,119 +933,153 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/model/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/createScript.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-985">
-          <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/dataInitScript.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/dao/MyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/employeeService/EmployeeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1223#1224#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1330#1331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/employeeService/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="150">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/service/departmentService/DepartmentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="132">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/java/main/com/altarix/task/dao/MyController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-263">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/dao/EmployeeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/dao/DepartmentDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="154">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/controller/MyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+            <element signature="e#4182#4183#0" expanded="true" />
+            <element signature="e#4236#4237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altarix/task/dao/EmployeeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|main|CompanyManagement</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

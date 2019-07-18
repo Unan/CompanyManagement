@@ -1,5 +1,8 @@
 package com.altarix.task.model;
 
+import com.altarix.task.serdes.DepartmentToStringSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -8,32 +11,48 @@ import java.util.Date;
 public class Employee {
 
     @Id
-    private String email;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
     @NotNull
     private String lastName;
+
     @NotNull
     private String firstName;
 
     private String middleName;
+
     @NotNull
     @Enumerated(EnumType.STRING)
     private Gender gender;
+
     @NotNull
     private Date birthDate;
+
     @NotNull
+    @Column(unique = true)
     private String phoneNumber;
+
+    @NotNull
+    @Column(unique = true)
+    private String email;
+
     @NotNull
     private Date hireDate;
 
     private Date fireDate;
+
     @NotNull
     @Enumerated(EnumType.STRING)
     private Position position;
+
     @NotNull
     private Integer wage;
-    @NotNull
-    @ManyToOne
+
+    @JsonSerialize(using = DepartmentToStringSerializer.class)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = true)
     private Department department;
+
     @NotNull
     private Boolean departmentHead;
 
@@ -67,6 +86,14 @@ public class Employee {
         this.wage = wage;
         this.department = department;
         this.departmentHead = departmentHead;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getEmail() {
