@@ -1,21 +1,24 @@
 package com.altarix.task.service.employeeService;
 
+import com.altarix.task.model.Department;
 import com.altarix.task.model.Employee;
 
 import java.util.Date;
 
 public interface EmployeeService {
-    void createEmployee(Employee employee);
+    Employee find(Integer id);
 
-    void editEmployeeInfo(Employee currentEmployee, Employee editedEmployee);
+    Employee find(String email);
 
-    void fireEmployee(String employeeEmail, Date fireDate);
+    void create(Employee employee);
 
-    Employee employeeInfo(String employeeEmail);
+    void edit(Employee employee);
 
-    void changeEmployeeDepartment(String employeeEmail, String departmentName);
+    void fire(Employee employee, Date fireDate);
 
-    Employee employeeLeader(String employeeEmail);
+    Employee info(Employee employee);
 
-    Employee searchEmployee(String employeeFirstName);
+    void changeDepartment(Employee employee, Department department);
+
+    Employee leader(Employee employee);
 }

@@ -1,11 +1,7 @@
 package com.altarix.task.dao;
 
 import com.altarix.task.model.Department;
-import org.hibernate.Criteria;
-import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,6 +10,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -23,38 +20,47 @@ public class DepartmentDAO {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public void addDepartment(Department department) {
+    public void add(Department department) {
         entityManager.persist(department);
     }
 
-    public boolean departmentExistence(String departmentName) {
-        return entityManager.contains(findDepartmentByName(departmentName));
+    public void delete(Department department) {
+        entityManager.remove(department);
     }
 
-    public Department findDepartmentByName(String departmentName) {
-        return entityManager.find(Department.class, departmentName);
+    public void update(Department department) {
+        entityManager.merge(department);
+        ArrayList arrayList = new ArrayList();
     }
 
-    public void deleteDepartment(String departmentName){
-        entityManager.remove(findDepartmentByName(departmentName));
+    public Department find(Integer departmentId) {
+        return entityManager.find(Department.class, departmentId);
     }
 
-    public List<Department> allDepartments() {
-        Session session = entityManager.unwrap(Session.class);
-        CriteriaBuilder cb = session.getCriteriaBuilder();
-        CriteriaQuery<Department> cq = cb.createQuery(Department.class);
-        Root<Department> rootEntry = cq.from(Department.class);
-        CriteriaQuery<Department> all = cq.select(rootEntry);
-        TypedQuery<Department> allQuery = session.createQuery(all);
+    public Department find(String departmentName) {
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Department> criteriaQuery = criteriaBuilder.createQuery(Department.class);
+        Root<Department> departmentRoot = criteriaQuery.from(Department.class);
+        criteriaQuery.select(departmentRoot);
+        criteriaQuery.where(criteriaBuilder.equal(departmentRoot.get("name"), departmentName));
+        return entityManager.createQuery(criteriaQuery).getSingleResult();
+    }
+
+    public List<Department> all() {
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Department> criteriaQuery = criteriaBuilder.createQuery(Department.class);
+        Root<Department> rootEntry = criteriaQuery.from(Department.class);
+        CriteriaQuery<Department> all = criteriaQuery.select(rootEntry);
+        TypedQuery<Department> allQuery = entityManager.createQuery(all);
         return allQuery.getResultList();
     }
 
-    public List<Department> getSubDepartments(String parentDepartment){
-        Session session = entityManager.unwrap(Session.class);
-        Criteria criteria = session.createCriteria(Department.class);
-        criteria.add(Restrictions.gt("department_name", parentDepartment));
-        System.out.println(session.createSQLQuery("SELECT FROM department WHERE parent_department_name LIKE " + parentDepartment));
-        return null;
+    public List<Department> sub(Department department) {
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Department> criteriaQuery = criteriaBuilder.createQuery(Department.class);
+        Root<Department> departmentRoot = criteriaQuery.from(Department.class);
+        criteriaQuery.select(departmentRoot).where(criteriaBuilder.equal(departmentRoot.get("parentDepartment"), department.getId()));
+        return entityManager.createQuery(criteriaQuery).getResultList();
     }
 }
 

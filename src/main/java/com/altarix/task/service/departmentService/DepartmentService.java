@@ -2,28 +2,28 @@ package com.altarix.task.service.departmentService;
 
 import com.altarix.task.model.Department;
 
-import java.util.Collection;
+import java.util.List;
 
 public interface DepartmentService {
-    void createDepartment(Department department);
+    Department find(String name);
 
-    void changeDepartmentName(String currentDepartmentName, String requiredDepartmentName);
+    Department find(Integer id);
 
-    void deleteDepartment(String departmentName);
+    void create(Department department);
 
-    Department departmentInfo(String departmentName);
+    void changeName(Department department, String requiredName);
 
-    Collection<Department> nextSubDepartments(String departmentName);
+    void delete(Department department);
 
-    Collection<Department> allSubDepartments(String departmentName);
+    List<Department> sub(Department department);
 
-    void changeParentDepartment(String subDepartmentName, String parentDepartmentName);
+    List<Department> under(Department department);
 
-    Collection<Department> allParentDepartments(String departmentName);
+    void changeParent(Department department, Department requiredParentDepartment);
 
-    Department searchDepartment(String departmentName);
+    List<Department> above(Department department);
 
-    Integer departmentWageAmount(String departmentName);
+    Integer employeesWageAmount(Department department);
 
-    void changeDepartmentForEmployeesOfDepartment(String currentDepartmentName, String requiredDepartmentName);
+    void moveDepartmentEmployeesToDepartment(Department currentDepartment, Department requiredDepartment);
 }
