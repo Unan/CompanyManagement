@@ -1,5 +1,6 @@
 package com.altarix.task.dao;
 
+import com.altarix.task.model.Department;
 import com.altarix.task.model.Employee;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +10,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -39,6 +41,10 @@ public class EmployeeDAO {
         Root<Employee> employeeRoot = criteriaQuery.from(Employee.class);
         criteriaQuery.select(employeeRoot);
         criteriaQuery.where(criteriaBuilder.equal(employeeRoot.get("email"), employeeEmail));
-        return entityManager.createQuery(criteriaQuery).getSingleResult();
+        List<Employee> employees = entityManager.createQuery(criteriaQuery).getResultList();
+        if (employees.size() == 0)
+            return null;
+        else
+            return employees.get(0);
     }
 }

@@ -21,4 +21,6 @@ public interface EmployeeService {
     void changeDepartment(Employee employee, Department department);
 
     Employee leader(Employee employee);
+
+    void moveDepartmentEmployeesToDepartment(Department currentDepartment, Department requiredDepartment);
 }

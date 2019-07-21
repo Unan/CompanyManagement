@@ -10,7 +10,6 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -30,7 +29,6 @@ public class DepartmentDAO {
 
     public void update(Department department) {
         entityManager.merge(department);
-        ArrayList arrayList = new ArrayList();
     }
 
     public Department find(Integer departmentId) {
@@ -43,7 +41,11 @@ public class DepartmentDAO {
         Root<Department> departmentRoot = criteriaQuery.from(Department.class);
         criteriaQuery.select(departmentRoot);
         criteriaQuery.where(criteriaBuilder.equal(departmentRoot.get("name"), departmentName));
-        return entityManager.createQuery(criteriaQuery).getSingleResult();
+        List<Department> departments = entityManager.createQuery(criteriaQuery).getResultList();
+        if (departments.size() == 0)
+            return null;
+        else
+            return departments.get(0);
     }
 
     public List<Department> all() {
@@ -56,11 +58,13 @@ public class DepartmentDAO {
     }
 
     public List<Department> sub(Department department) {
-        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
-        CriteriaQuery<Department> criteriaQuery = criteriaBuilder.createQuery(Department.class);
-        Root<Department> departmentRoot = criteriaQuery.from(Department.class);
-        criteriaQuery.select(departmentRoot).where(criteriaBuilder.equal(departmentRoot.get("parentDepartment"), department.getId()));
-        return entityManager.createQuery(criteriaQuery).getResultList();
+        if (department != null) {
+            CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+            CriteriaQuery<Department> criteriaQuery = criteriaBuilder.createQuery(Department.class);
+            Root<Department> departmentRoot = criteriaQuery.from(Department.class);
+            criteriaQuery.select(departmentRoot).where(criteriaBuilder.equal(departmentRoot.get("parentDepartment"), department.getId()));
+            return entityManager.createQuery(criteriaQuery).getResultList();
+        } else return null;
     }
 }
 

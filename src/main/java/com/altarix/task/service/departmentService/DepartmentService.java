@@ -1,10 +1,14 @@
 package com.altarix.task.service.departmentService;
 
 import com.altarix.task.model.Department;
+import com.altarix.task.model.dto.DepartmentDTO;
 
 import java.util.List;
 
 public interface DepartmentService {
+
+    Department generateFromDTO(DepartmentDTO departmentDTO);
+
     Department find(String name);
 
     Department find(Integer id);
@@ -24,6 +28,4 @@ public interface DepartmentService {
     List<Department> above(Department department);
 
     Integer employeesWageAmount(Department department);
-
-    void moveDepartmentEmployeesToDepartment(Department currentDepartment, Department requiredDepartment);
 }
