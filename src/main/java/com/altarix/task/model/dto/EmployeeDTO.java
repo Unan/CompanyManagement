@@ -1,77 +1,54 @@
-package com.altarix.task.model;
+package com.altarix.task.model.dto;
 
-import com.altarix.task.serdes.DepartmentToStringSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.altarix.task.model.Gender;
+import com.altarix.task.model.Position;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-@Entity
-public class Employee {
+public class EmployeeDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-
-    @NotNull
     private String lastName;
 
-    @NotNull
     private String firstName;
 
     private String middleName;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @NotNull
     private Date birthDate;
 
-    @NotNull
-    @Column(unique = true)
     private String phoneNumber;
 
-    @NotNull
-    @Column(unique = true)
     private String email;
 
-    @NotNull
     private Date hireDate;
 
     private Date fireDate;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
     private Position position;
 
-    @NotNull
     private Integer wage;
 
-    @JsonSerialize(using = DepartmentToStringSerializer.class)
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = true)
-    private Department department;
+    private String department;
 
-    @NotNull
     private Boolean departmentHead;
 
-    public Employee() {
+    public EmployeeDTO() {
     }
 
-    public Employee(String email,
-                    String lastName,
-                    String firstName,
-                    String middleName,
-                    Gender gender,
-                    Date birthDate,
-                    String phoneNumber,
-                    Date hireDate,
-                    Date fireDate,
-                    Position position,
-                    Integer wage,
-                    Department department,
-                    Boolean departmentHead
+    public EmployeeDTO(String email,
+                       String lastName,
+                       String firstName,
+                       String middleName,
+                       Gender gender,
+                       Date birthDate,
+                       String phoneNumber,
+                       Date hireDate,
+                       Date fireDate,
+                       Position position,
+                       Integer wage,
+                       String department,
+                       Boolean departmentHead
     ) {
         this.email = email;
         this.lastName = lastName;
@@ -86,14 +63,6 @@ public class Employee {
         this.wage = wage;
         this.department = department;
         this.departmentHead = departmentHead;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getEmail() {
@@ -184,11 +153,11 @@ public class Employee {
         this.wage = wage;
     }
 
-    public Department getDepartment() {
+    public String getDepartment() {
         return department;
     }
 
-    public void setDepartment(Department department) {
+    public void setDepartment(String department) {
         this.department = department;
     }
 
