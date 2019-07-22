@@ -1,7 +1,7 @@
 package com.altarix.task.dao;
 
-import com.altarix.task.model.Department;
 import com.altarix.task.model.Employee;
+import com.altarix.task.model.Position;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -32,7 +32,11 @@ public class EmployeeDAO {
     }
 
     public Employee find(Integer employeeId) {
-        return entityManager.find(Employee.class, employeeId);
+        try {
+            return entityManager.find(Employee.class, employeeId);
+        } catch (Throwable throwable) {
+            return null;
+        }
     }
 
     public Employee find(String employeeEmail) {
@@ -46,5 +50,13 @@ public class EmployeeDAO {
             return null;
         else
             return employees.get(0);
+    }
+
+    public List<Employee> employeesOnPosition(Position position) {
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Employee> criteriaQuery = criteriaBuilder.createQuery(Employee.class);
+        Root<Employee> employeeRoot = criteriaQuery.from(Employee.class);
+        criteriaQuery.select(employeeRoot).where(criteriaBuilder.equal(employeeRoot.get("position"), position));
+        return entityManager.createQuery(criteriaQuery).getResultList();
     }
 }

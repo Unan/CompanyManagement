@@ -7,6 +7,8 @@ import java.util.Date;
 
 public class EmployeeDTO {
 
+    private Integer id;
+
     private String lastName;
 
     private String firstName;
@@ -36,8 +38,8 @@ public class EmployeeDTO {
     public EmployeeDTO() {
     }
 
-    public EmployeeDTO(String email,
-                       String lastName,
+    public EmployeeDTO(String lastName,
+                       String email,
                        String firstName,
                        String middleName,
                        Gender gender,
@@ -63,6 +65,45 @@ public class EmployeeDTO {
         this.wage = wage;
         this.department = department;
         this.departmentHead = departmentHead;
+    }
+
+    public EmployeeDTO(Integer id,
+                       String email,
+                       String lastName,
+                       String firstName,
+                       String middleName,
+                       Gender gender,
+                       Date birthDate,
+                       String phoneNumber,
+                       Date hireDate,
+                       Date fireDate,
+                       Position position,
+                       Integer wage,
+                       String department,
+                       Boolean departmentHead
+    ) {
+        this.id = id;
+        this.email = email;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.phoneNumber = phoneNumber;
+        this.hireDate = hireDate;
+        this.fireDate = fireDate;
+        this.position = position;
+        this.wage = wage;
+        this.department = department;
+        this.departmentHead = departmentHead;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getEmail() {

@@ -26,7 +26,7 @@ public class Department {
     @ManyToOne(cascade = CascadeType.ALL)
     private Department parentDepartment;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Employee> employees;
 
     public Department() {
