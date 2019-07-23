@@ -4,6 +4,7 @@ buildscript {
         hibernateVersion = '5.4.3.Final'
         postgreSQLVersion = '42.2.6'
         springJDBCVersion = '5.1.8.RELEASE'
+        swaggerVersion = '2.8.0'
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -33,6 +34,9 @@ dependencies {
     implementation group: 'org.hibernate', name: 'hibernate-core', version: "${hibernateVersion}"
     implementation group: 'org.postgresql', name: 'postgresql', version: "${postgreSQLVersion}"
     implementation group: 'org.springframework', name: 'spring-jdbc', version: "${springJDBCVersion}"
+
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: "${swaggerVersion}"
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: "${swaggerVersion}"
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

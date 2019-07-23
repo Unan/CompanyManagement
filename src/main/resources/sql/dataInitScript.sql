@@ -1,7 +1,7 @@
 INSERT INTO department (id, name, foundation, parent_department_id)
     VALUES (1, 'rootDep', '20100618', null);
 INSERT INTO department (id, name, foundation, parent_department_id)
-    VALUES (2, 'secFloorDep1', '20110618', 1);
+    VALUES (2, 'secondFloorDep1', '20110618', 1);
 INSERT INTO department (id, name, foundation, parent_department_id)
     VALUES (3, 'thirdFloorDep1', '20120618', 2);
 INSERT INTO department (id, name, foundation, parent_department_id)
