@@ -4,6 +4,7 @@ import com.altarix.task.dao.DepartmentDAO;
 import com.altarix.task.model.Department;
 import com.altarix.task.model.Employee;
 import com.altarix.task.model.dto.DepartmentDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -13,17 +14,31 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     private final DepartmentDAO departmentDAO;
 
+    @Value("${nameRegex}")
+    private String nameRegex;
+
     public DepartmentServiceImpl(DepartmentDAO departmentDAO) {
         this.departmentDAO = departmentDAO;
     }
 
+    private boolean checkDate(Date foundation) {
+        return foundation.before(new Date());
+    }
+
+    private boolean checkName(String name){
+        return name.matches(nameRegex);
+    }
+
+    @Override
     public Department generateFromDTO(DepartmentDTO departmentDTO) {
-        Department department = new Department();
-        department.setName(departmentDTO.getName());
-        department.setFoundation(departmentDTO.getFoundation());
-        department.setParentDepartment(find(departmentDTO.getParentDepartment()));
-        department.setEmployees(departmentDTO.getEmployees());
-        return department;
+        if (checkDate(departmentDTO.getFoundation()) && checkName(departmentDTO.getName())) {
+            Department department = new Department();
+            department.setName(departmentDTO.getName());
+            department.setFoundation(departmentDTO.getFoundation());
+            department.setParentDepartment(find(departmentDTO.getParentDepartment()));
+            department.setEmployees(departmentDTO.getEmployees());
+            return department;
+        } else return null;
     }
 
     @Override

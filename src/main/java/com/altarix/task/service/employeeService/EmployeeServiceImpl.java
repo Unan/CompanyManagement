@@ -6,6 +6,7 @@ import com.altarix.task.model.Department;
 import com.altarix.task.model.Employee;
 import com.altarix.task.model.Position;
 import com.altarix.task.model.dto.EmployeeDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,29 +19,103 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeDAO employeeDAO;
     private final DepartmentDAO departmentDAO;
 
+    @Value("${nameRegex}")
+    private String nameRegex;
+    @Value("${emailRegex}")
+    private String emailRegex;
+    @Value("${phoneRegex}")
+    private String phoneRegex;
+
     public EmployeeServiceImpl(EmployeeDAO employeeDAO, DepartmentDAO departmentDAO) {
         this.employeeDAO = employeeDAO;
         this.departmentDAO = departmentDAO;
     }
 
+    private boolean checkName(String name) {
+        return name.matches(nameRegex);
+    }
+
+    private boolean emailValidation(String email) {
+        return email.matches(emailRegex);
+    }
+
+    private boolean phoneNumberValidation(String phoneNumber) {
+        return phoneNumber.matches(phoneRegex);
+    }
+
+    private boolean dateValidation(Date birth, Date hire, Date fire) {
+        if (fire == null)
+            return birth.before(hire) && hire.before(new Date());
+        else
+            return birth.before(hire) && hire.before(fire) && fire.before(new Date());
+    }
+
+    private boolean wageValidation(EmployeeDTO employeeDTO) {
+        boolean head = false;
+        try {
+            head = find(employeeDTO.getId()).getDepartmentHead();
+        } catch (Throwable ignored) {
+        }
+        if (head) {
+            return true;
+        } else if (employeeDTO.getDepartment() == null || leader(find(employeeDTO.getEmail())) == null) {
+            return true;
+        } else if (departmentDAO.find(employeeDTO.getDepartment()) != null
+                && departmentDAO.find(employeeDTO.getDepartment()).getEmployees().size() > 0 &&
+                leader(find(employeeDTO.getEmail())) != null) {
+            return employeeDTO.getWage() <= leader(find(employeeDTO.getEmail())).getWage();
+        } else return false;
+    }
+
+    private boolean departmentHeadValidation(EmployeeDTO employeeDTO) {
+        boolean head = false;
+        try {
+            head = find(employeeDTO.getId()).getDepartmentHead();
+        } catch (Throwable ignored) {
+        }
+        if (head) {
+            return true;
+        } else if (employeeDTO.getDepartment() == null || !employeeDTO.getDepartmentHead()) {
+            return true;
+        } else if (departmentDAO.find(employeeDTO.getDepartment()) != null &&
+                departmentDAO.find(employeeDTO.getDepartment()).getEmployees().size() > 0 &&
+                leader(find(employeeDTO.getEmail())) != null) {
+            return false;
+        } else return true;
+    }
+
     @Override
     public Employee generateFromDTO(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee();
-        try {employee.setId(employeeDTO.getId());} catch (Throwable ignored){}
-        employee.setEmail(employeeDTO.getEmail());
-        employee.setLastName(employeeDTO.getLastName());
-        employee.setFirstName(employeeDTO.getFirstName());
-        employee.setMiddleName(employeeDTO.getMiddleName());
-        employee.setGender(employeeDTO.getGender());
-        employee.setBirthDate(employeeDTO.getBirthDate());
-        employee.setPhoneNumber(employeeDTO.getPhoneNumber());
-        employee.setHireDate(employeeDTO.getHireDate());
-        employee.setFireDate(employeeDTO.getFireDate());
-        employee.setPosition(employeeDTO.getPosition());
-        employee.setWage(employeeDTO.getWage());
-        employee.setDepartment(departmentDAO.find(employeeDTO.getDepartment()));
-        employee.setDepartmentHead(employeeDTO.getDepartmentHead());
-        return employee;
+        if (
+                phoneNumberValidation(employeeDTO.getPhoneNumber()) &&
+                emailValidation(employeeDTO.getEmail()) &&
+                dateValidation(employeeDTO.getBirthDate(), employeeDTO.getHireDate(), employeeDTO.getFireDate()) &&
+                wageValidation(employeeDTO) &&
+                departmentHeadValidation(employeeDTO) &&
+                checkName(employeeDTO.getLastName()) &&
+                checkName(employeeDTO.getFirstName()) &&
+                checkName(employeeDTO.getMiddleName())
+        ) {
+            Employee employee = new Employee();
+            try {
+                employee.setId(employeeDTO.getId());
+            } catch (Throwable ignored) {
+            }
+            employee.setEmail(employeeDTO.getEmail());
+            employee.setLastName(employeeDTO.getLastName());
+            employee.setFirstName(employeeDTO.getFirstName());
+            employee.setMiddleName(employeeDTO.getMiddleName());
+            employee.setGender(employeeDTO.getGender());
+            employee.setBirthDate(employeeDTO.getBirthDate());
+            employee.setPhoneNumber(employeeDTO.getPhoneNumber());
+            employee.setHireDate(employeeDTO.getHireDate());
+            employee.setFireDate(employeeDTO.getFireDate());
+            employee.setPosition(employeeDTO.getPosition());
+            employee.setWage(employeeDTO.getWage());
+            employee.setDepartment(departmentDAO.find(employeeDTO.getDepartment()));
+            employee.setDepartmentHead(employeeDTO.getDepartmentHead());
+            return employee;
+        } else return null;
     }
 
     @Override
@@ -60,7 +135,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void create(Employee employee) {
-        if (employee.getId() == null && find(employee.getEmail()) == null) {
+        if (employee != null && employee.getId() == null && find(employee.getEmail()) == null) {
             employee.setDepartmentHead(false);
             employeeDAO.add(employee);
         }
@@ -68,7 +143,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void edit(Employee employee) {
-        if (find(employee.getId()) != null) {
+        if (employee != null && find(employee.getId()) != null) {
             employeeDAO.update(employee);
         }
     }
