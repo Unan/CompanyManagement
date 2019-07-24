@@ -1,9 +1,12 @@
 package com.altarix.task.service.departmentService;
 
 import com.altarix.task.dao.DepartmentDAO;
+import com.altarix.task.dao.LoggingDAO;
 import com.altarix.task.model.Department;
 import com.altarix.task.model.Employee;
 import com.altarix.task.model.dto.DepartmentDTO;
+import com.altarix.task.model.log.DepartmentAction;
+import com.altarix.task.model.log.DepartmentLog;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +16,14 @@ import java.util.*;
 public class DepartmentServiceImpl implements DepartmentService {
 
     private final DepartmentDAO departmentDAO;
+    private final LoggingDAO loggingDAO;
 
     @Value("${nameRegex}")
     private String nameRegex;
 
-    public DepartmentServiceImpl(DepartmentDAO departmentDAO) {
+    public DepartmentServiceImpl(DepartmentDAO departmentDAO, LoggingDAO loggingDAO) {
         this.departmentDAO = departmentDAO;
+        this.loggingDAO = loggingDAO;
     }
 
     private boolean checkDate(Date foundation) {
@@ -53,16 +58,29 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public void create(Department department) {
-        if (department.getId() == null && find(department.getName()) == null) {
+        boolean check = false;
+        try{
+            check = department.getId() == null;
+        } catch (Throwable ignore){}
+        if (check && find(department.getName()) == null) {
             departmentDAO.add(department);
+            loggingDAO.add(new DepartmentLog(DepartmentAction.CREATE, null, department.getName()));
         }
     }
 
     @Override
     public void changeName(Department department, String requiredName) {
         if (find(department.getId()) != null && find(requiredName) == null) {
+
+            DepartmentLog departmentLog = new DepartmentLog();
+            departmentLog.setDepartmentAction(DepartmentAction.RENAME);
+            departmentLog.setPreviousState(department.getName());
+
             department.setName(requiredName);
             departmentDAO.update(department);
+
+            departmentLog.setCurrentState(requiredName);
+            loggingDAO.add(departmentLog);
         }
     }
 
@@ -97,8 +115,16 @@ public class DepartmentServiceImpl implements DepartmentService {
     public void changeParent(Department department, Department requiredParentDepartment) {
         if (find(department.getId()) != null && find(requiredParentDepartment.getId()) != null) {
             if (!under(department).contains(requiredParentDepartment)) {
+
+                DepartmentLog departmentLog = new DepartmentLog();
+                departmentLog.setDepartmentAction(DepartmentAction.MOVE);
+                departmentLog.setPreviousState(department.getParentDepartment().getName());
+
                 department.setParentDepartment(requiredParentDepartment);
                 departmentDAO.update(department);
+
+                departmentLog.setCurrentState(requiredParentDepartment.getName());
+                loggingDAO.add(departmentLog);
             }
         }
     }

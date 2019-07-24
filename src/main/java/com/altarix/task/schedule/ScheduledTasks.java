@@ -3,7 +3,7 @@ package com.altarix.task.schedule;
 import com.altarix.task.dao.DepartmentDAO;
 import com.altarix.task.dao.ScheduleDAO;
 import com.altarix.task.model.Department;
-import com.altarix.task.model.DepartmentWageInfo;
+import com.altarix.task.model.schedule.DepartmentWageInfo;
 import com.altarix.task.service.departmentService.DepartmentService;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

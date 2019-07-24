@@ -1,4 +1,4 @@
-package com.altarix.task.model;
+package com.altarix.task.model.schedule;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

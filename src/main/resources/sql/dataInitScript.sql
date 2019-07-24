@@ -1,13 +1,13 @@
 INSERT INTO department (id, name, foundation, parent_department_id)
-    VALUES (1, 'Корень1', '20100618', null);
+    VALUES (1, 'Корень-А', '20100618', null);
 INSERT INTO department (id, name, foundation, parent_department_id)
-    VALUES (2, 'ВторойУровень1', '20110618', 1);
+    VALUES (2, 'ВторойУровень-А', '20110618', 1);
 INSERT INTO department (id, name, foundation, parent_department_id)
-    VALUES (3, 'ТретийУровень1', '20120618', 2);
+    VALUES (3, 'ТретийУровень-А', '20120618', 2);
 INSERT INTO department (id, name, foundation, parent_department_id)
-    VALUES (4, 'ТретийУровень2', '20130618', 2);
+    VALUES (4, 'ТретийУровень-Б', '20130618', 2);
 INSERT INTO department (id, name, foundation, parent_department_id)
-    VALUES (5, 'ТретийУровень3', '20140618', 2);
+    VALUES (5, 'ТретийУровень-В', '20140618', 2);
 
 
 INSERT INTO employee (id, email, first_name, last_name, middle_name, gender, birth_date, phone_number, hire_date,

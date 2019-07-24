@@ -1,6 +1,5 @@
 package com.altarix.task.model.dto;
 
-import com.altarix.task.model.Department;
 import com.altarix.task.model.Employee;
 
 import java.util.Date;

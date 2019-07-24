@@ -19,6 +19,14 @@ create table department_wage_info
     wage_amount     int4,
     primary key (id)
 );
+create table department_log
+(
+    id              int4 not null,
+    department_action varchar(255) not null,
+    previous_state    varchar(255),
+    current_state     varchar(255) not null,
+    primary key (id)
+);
 create table employee
 (
     id              int4         not null,

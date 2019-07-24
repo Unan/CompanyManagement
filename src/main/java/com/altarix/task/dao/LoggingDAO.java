@@ -1,6 +1,6 @@
 package com.altarix.task.dao;
 
-import com.altarix.task.model.schedule.DepartmentWageInfo;
+import com.altarix.task.model.log.DepartmentLog;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -9,12 +9,12 @@ import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public class ScheduleDAO {
+public class LoggingDAO {
 
     @PersistenceContext
     private EntityManager entityManager;
 
-    public void update(DepartmentWageInfo departmentWageInfo){
-        entityManager.merge(departmentWageInfo);
+    public void add(DepartmentLog departmentLog){
+        entityManager.persist(departmentLog);
     }
 }
