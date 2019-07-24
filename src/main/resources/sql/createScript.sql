@@ -12,6 +12,13 @@ create table department_employees
     department_id int4 not null,
     employees_id  int4 not null
 );
+create table department_wage_info
+(
+    id              int4 not null,
+    department_name varchar(255),
+    wage_amount     int4,
+    primary key (id)
+);
 create table employee
 (
     id              int4         not null,
